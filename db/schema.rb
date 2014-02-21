@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221050653) do
+ActiveRecord::Schema.define(version: 20140221064056) do
 
   create_table "auth_tokens", force: true do |t|
     t.integer  "user_id"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140221050653) do
     t.string   "title",      default: "", null: false
     t.text     "content",    default: "", null: false
     t.integer  "hit",        default: 0,  null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

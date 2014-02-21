@@ -31,5 +31,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :auth_tokens, dependent: :destroy
+  has_many :posts
 
 end
