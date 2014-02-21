@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220060141) do
+ActiveRecord::Schema.define(version: 20140221022955) do
 
   create_table "auth_tokens", force: true do |t|
     t.integer  "user_id"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 20140220060141) do
   create_table "posts", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title",      default: "", null: false
+    t.text     "content",    default: "", null: false
+    t.integer  "hit",        default: 0,  null: false
   end
 
   create_table "users", force: true do |t|
